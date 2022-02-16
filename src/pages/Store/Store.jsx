@@ -10,8 +10,6 @@ const Store = ({
   }
 }) => {
 
-  console.log(products);
-
   return (
     <section className="container store">
       <h1>Store</h1>
@@ -21,12 +19,13 @@ const Store = ({
             <div
               key={product?.id}
               className="col-lg-3 col-sm-6 col-12 mt-4"
-              >
+            >
               <Product
                 product={product}
               />
             </div>
-          )) : <CustomSkeleton /> }
+          )) : <CustomSkeleton />
+        }
       </div>
     </section>
   )

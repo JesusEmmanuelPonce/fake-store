@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import axiosClient from '../../helpers/axiosClient';
+import React, {
+  useState,
+  useEffect,
+} from 'react';
 
-import Store from './Store';
+import Store       from './Store';
+import axiosClient from '../../helpers/axiosClient';
 
 const StoreContainer = () => {
 
@@ -9,6 +12,7 @@ const StoreContainer = () => {
 
   useEffect(() => {
     
+    // Get all products
     const getProducts = async() => {
       const { data } = await axiosClient.get("/products");
 

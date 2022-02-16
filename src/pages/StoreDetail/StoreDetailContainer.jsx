@@ -1,37 +1,41 @@
 import React, {
-    useState,
-    useEffect,
+	useState,
+	useEffect,
 } from 'react'
-import { useParams } from 'react-router-dom';
+import {
+	useParams,
+	useNavigate,
+} from 'react-router-dom';
 
 import axiosClient from '../../helpers/axiosClient';
 import StoreDetail from './StoreDetail';
 
 const StoreDetailContainer = () => {
 
-    const { id } = useParams();
+	const { id }   = useParams();
+	const nagivate = useNavigate();
 
-    const [product, setProduct] = useState(null);
+	const [product, setProduct] = useState(null);
 
-    useEffect(() => {
+	useEffect(() => {
 
-        const getOneProduct = async() => {
-            const { data } = await axiosClient.get(`/products/${id}`);
+		// Get one product
+		const getOneProduct = async() => {
+			const { data } = await axiosClient.get(`/products/${id}`);
 
-            console.log(data)
+			setProduct(data)
+		};
 
-            setProduct(data)
-        };
-
-        getOneProduct();
-      
-    }, []);
+		getOneProduct();
+		
+	}, []);
 
   return (
     <StoreDetail
-        delegations={{
-            product,
-        }}
+			delegations={{
+				product,
+				nagivate,
+			}}
     />
   )
 };
