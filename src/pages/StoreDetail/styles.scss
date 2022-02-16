@@ -1,0 +1,29 @@
+.storeDetail {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__product {
+    display: flex;
+
+    width: 70%;
+
+    &-img {
+      align-items: center;
+      display: flex;
+      width: 30%;
+
+      img {
+        height: 200px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-detail {
+      padding: 15px;
+      width: 70%;
+    }
+  }
+}
