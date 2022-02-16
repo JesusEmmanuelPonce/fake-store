@@ -1,13 +1,16 @@
-import { lazy, Suspense } from "react";
 import {
-  BrowserRouter as Router,
+  lazy,
+  Suspense,
+} from "react";
+import {
+  Route,
   Routes,
-  Route
+  BrowserRouter as Router,
 } from "react-router-dom";
 
+const Store       = lazy(() => import('./pages/Store'));
 const StoreLayout = lazy(() => import('./pages/StoreLayout'));
 const StoreDetail = lazy(() => import('./pages/StoreDetail'));
-const Store       = lazy(() => import('./pages/Store'));
 
 const App = () => {
   return (

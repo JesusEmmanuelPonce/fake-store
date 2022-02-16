@@ -1,4 +1,5 @@
-import React    from 'react'
+import React from 'react'
+import CustomSkeleton from '../../components/CustomSkeleton';
 
 import Product from '../../components/Product/Product';
 import "./styles.scss";
@@ -13,15 +14,19 @@ const Store = ({
 
   return (
     <section className="container store">
+      <h1>Store</h1>
       <div className="row">
-        {products.map(product => (
-          <div className="col-lg-3 col-sm-6 col-12 mt-4">
-            <Product
+        {!products.length < 1 ?
+          products.map(product => (
+            <div
               key={product?.id}
-              product={product}
-            />
-          </div>
-        ))}
+              className="col-lg-3 col-sm-6 col-12 mt-4"
+              >
+              <Product
+                product={product}
+              />
+            </div>
+          )) : <CustomSkeleton /> }
       </div>
     </section>
   )

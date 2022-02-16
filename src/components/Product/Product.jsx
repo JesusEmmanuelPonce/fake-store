@@ -11,7 +11,7 @@ const Product = ({ product }) => {
         <Card.Img className="cardImage" variant="top" src={product.image} />
         <Card.Body>
         <Card.Title className="cardTitle"> { product.title } </Card.Title>
-        <Card.Text> { currencyFormat(product.price)} </Card.Text>
+        <Card.Text className="cardPrice"> { currencyFormat(product.price)} </Card.Text>
         <Link to={`/${product.id}`}>Ver detalle</Link>
         </Card.Body>
     </Card>
