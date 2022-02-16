@@ -1,8 +1,16 @@
 .storeDetail {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
   min-height: 100vh;
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 
   &__product {
     display: flex;
@@ -22,8 +30,14 @@
     }
 
     &-detail {
-      padding: 15px;
+      padding: 16px;
       width: 70%;
+
+      label {
+        color: rgb(120, 120, 120);
+        font-weight: 700;
+        font-size: 14px;
+      }
     }
   }
 }
