@@ -1,8 +1,7 @@
-import React  from "react";
 import Rating from '@mui/material/Rating';
 
-import currencyFormat  from "../../helpers/currencyFormat";
-import ProductSkeleton from "../../components/ProductSkeleton";
+import currencyFormat  from "helpers/currencyFormat";
+import ProductSkeleton from "components/ProductSkeleton";
 import "./styles.scss";
 
 const StoreDetail = ({

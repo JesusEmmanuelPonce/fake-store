@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 
-import currencyFormat from '../../helpers/currencyFormat';
+import currencyFormat from 'helpers/currencyFormat';
 import "./styles.scss";
 
 const Product = ({ product }) => {
