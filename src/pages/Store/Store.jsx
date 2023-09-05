@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
-import Product from '../../components/Product/Product';
-import CustomSkeleton from '../../components/CustomSkeleton';
+import Product from 'components/Product/Product';
+import CustomSkeleton from 'components/CustomSkeleton';
 import "./styles.scss";
 
 const Store = ({

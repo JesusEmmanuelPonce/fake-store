@@ -1,4 +1,4 @@
-import React, {
+import {
 	useState,
 	useEffect,
 } from 'react'
@@ -7,7 +7,7 @@ import {
 	useNavigate,
 } from 'react-router-dom';
 
-import axiosClient from '../../helpers/axiosClient';
+import axiosClient from 'helpers/axiosClient';
 import StoreDetail from './StoreDetail';
 
 const StoreDetailContainer = () => {

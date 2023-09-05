@@ -1,10 +1,10 @@
-import React, {
+import {
   useState,
   useEffect,
 } from 'react';
 
 import Store       from './Store';
-import axiosClient from '../../helpers/axiosClient';
+import axiosClient from 'helpers/axiosClient';
 
 const StoreContainer = () => {
 
